@@ -2,6 +2,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.io.*;
 
+/**
+* @author Jacob Smith
+* WebCrawler collects the urls of web pages that can be reached in a single
+* step from a particular starting web page
+*/
+
+
 public class WebCrawler {
 
 	private ArrayList<String> collectUrls;
@@ -58,7 +65,7 @@ public class WebCrawler {
 		ArrayList<String> foundUrls = new ArrayList<String>();
 		String[] output = new String[0];
 		String regex = "<a href=\""; // Created String regex to remove unwanted bits
-										
+
 		for (String url : myUrls) { // For each loop to split the url with the regex characters
 			output = url.split(regex);
 			foundUrls.add(output[1]); // Regex1 which splits the first urls
